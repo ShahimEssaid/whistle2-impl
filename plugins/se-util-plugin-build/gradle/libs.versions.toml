@@ -1,0 +1,7 @@
+[versions]
+whistle = "dev-SNAPSHOT"
+
+
+[libraries]
+google-whistle-core-runtime = { module = "com.essaid.groupId.com.google.cloud.verticals.foundations.dataharmonization:runtime", version.ref = "whistle" }
+se-whistle-common = { module = "com.essaid.whistle:common", version = "0.0.1-SNAPSHOT" }

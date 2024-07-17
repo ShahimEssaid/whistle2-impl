@@ -1,0 +1,14 @@
+import "class:com.essaid.whistle.plugin.seutil.SeUtilPlugin"
+import "./functions.wstl"
+
+hello: toUpper("world")
+
+if seutil::functionExists("functions", "functionName", "arg1") then {
+    exists: true
+    functions::functionName("arg1")
+} else {
+  exists: false
+  // This would be an error since the function doesn't exist.
+  // functions::functionName("arg1")
+}
+

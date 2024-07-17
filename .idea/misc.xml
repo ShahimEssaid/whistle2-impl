@@ -3,7 +3,15 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/common-build" />
-    <file type="web" url="file://$PROJECT_DIR$/plugins/se-util-plugin-build" />
+    <file type="web" url="file://$PROJECT_DIR$/distributions/all-dist-build" />
+    <file type="web" url="file://$PROJECT_DIR$/plugins/seutil-plugin-build" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/common-build/common/build/publications/maven/pom-default.xml" />
+      </list>
+    </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />

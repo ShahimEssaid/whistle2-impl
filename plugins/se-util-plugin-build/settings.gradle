@@ -1,5 +1,0 @@
-rootProject.name = 'se-util-plugin-build'
-include 'se-util-plugin'
-
-includeBuild '../../common-build'
-

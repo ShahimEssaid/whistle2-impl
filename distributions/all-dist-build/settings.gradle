@@ -1,0 +1,3 @@
+rootProject.name = 'all-dist-build'
+
+includeBuild("../../plugins/seutil-plugin-build")

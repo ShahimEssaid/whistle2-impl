@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/common-build" />
-        <option name="gradleHome" value="" />
-        <option name="gradleJvm" value="17" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/common-build" />
@@ -24,17 +21,46 @@
                   <project path="$PROJECT_DIR$/common-build/common" />
                 </projects>
               </build>
+              <build path="$PROJECT_DIR$/plugins/seutil-plugin-build" name="seutil-plugin-build">
+                <projects>
+                  <project path="$PROJECT_DIR$/plugins/seutil-plugin-build" />
+                  <project path="$PROJECT_DIR$/plugins/seutil-plugin-build/seutil-plugin" />
+                </projects>
+              </build>
             </builds>
           </compositeBuild>
         </compositeConfiguration>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/plugins/se-util-plugin-build" />
-        <option name="gradleJvm" value="17" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/distributions/all-dist-build" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/common-build" />
             <option value="$PROJECT_DIR$/common-build/common" />
-            <option value="$PROJECT_DIR$/plugins/se-util-plugin-build" />
-            <option value="$PROJECT_DIR$/plugins/se-util-plugin-build/se-util-plugin" />
+            <option value="$PROJECT_DIR$/distributions/all-dist-build" />
+            <option value="$PROJECT_DIR$/plugins/seutil-plugin-build" />
+            <option value="$PROJECT_DIR$/plugins/seutil-plugin-build/seutil-plugin" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT">
+            <builds>
+              <build path="$PROJECT_DIR$/common-build" name="common-build">
+                <projects>
+                  <project path="$PROJECT_DIR$/common-build" />
+                  <project path="$PROJECT_DIR$/common-build/common" />
+                </projects>
+              </build>
+            </builds>
+          </compositeBuild>
+        </compositeConfiguration>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/plugins/seutil-plugin-build" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/common-build" />
+            <option value="$PROJECT_DIR$/common-build/common" />
+            <option value="$PROJECT_DIR$/plugins/seutil-plugin-build" />
+            <option value="$PROJECT_DIR$/plugins/seutil-plugin-build/seutil-plugin" />
           </set>
         </option>
       </GradleProjectSettings>

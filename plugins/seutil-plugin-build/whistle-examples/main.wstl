@@ -3,7 +3,7 @@ import "./functions.wstl"
 
 hello: toUpper("world")
 
-if seutil::functionExists("functions", "functionName", "arg1") then {
+if seutil::fnExists("functions", "functionName", "arg1") then {
     exists: true
     functions::functionName("arg1")
 } else {

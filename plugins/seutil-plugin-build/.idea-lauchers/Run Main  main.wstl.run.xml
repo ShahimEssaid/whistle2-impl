@@ -1,9 +1,9 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Run Main  main.wstl" type="Application" factoryName="Application">
     <option name="MAIN_CLASS_NAME" value="com.google.cloud.verticals.foundations.dataharmonization.Main" />
-    <module name="se-util-plugin-build.se-util-plugin.main" />
+    <module name="seutil-plugin-build.seutil-plugin.main" />
     <option name="PROGRAM_PARAMETERS" value="-m whistle-examples/main.wstl" />
-    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/plugins/se-util-plugin-build" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/plugins/seutil-plugin-build" />
     <method v="2">
       <option name="Make" enabled="true" />
     </method>

@@ -3,12 +3,13 @@ import "./functions.wstl"
 
 hello: toUpper("world")
 
-if seutil::fnExists("functions", "functionName", "arg1") then {
-    exists: true
-    functions::functionName("arg1")
+// the optional function call
+optFnCall: seutil::optCallFn("functions", "functionName", "arg1")
+
+// the if function exists check. In this case it does not exist because the package name is modified.
+if seutil::fnExists("functions1", "functionName", "arg1") then {
+  fnExists: functions1::functionName("arg1")
 } else {
-  exists: false
-  // This would be an error since the function doesn't exist.
-  // functions::functionName("arg1")
+  ifFnExists: "Doesn't exist"
 }
 

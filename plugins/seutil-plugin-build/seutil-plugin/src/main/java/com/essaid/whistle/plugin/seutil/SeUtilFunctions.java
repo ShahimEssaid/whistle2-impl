@@ -17,4 +17,10 @@ public class SeUtilFunctions {
     return context.getDataTypeImplementation().primitiveOf(function.isPresent());
   }
 
+  @PluginFunction
+  public static Data optCallFn(RuntimeContext context, String packageName,
+      String functionName, Data... args) {
+    return FunctionUtils.optionallyCallFunction(context, packageName, functionName, args);
+  }
+
 }

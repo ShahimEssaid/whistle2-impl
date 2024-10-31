@@ -1,5 +1,0 @@
-rootProject.name = 'seutil-plugin-build'
-include 'seutil-plugin'
-
-includeBuild '../../common-build'
-

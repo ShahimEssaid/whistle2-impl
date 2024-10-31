@@ -1,5 +1,6 @@
 package functions
 
 def functionName(arg1) {
-functionCalled: true
+ functionCalled: true
+ test: $this.functionCalled
 }

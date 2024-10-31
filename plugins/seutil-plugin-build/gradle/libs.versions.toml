@@ -1,7 +1,9 @@
 [versions]
-whistle = "dev-SNAPSHOT"
+google-whistle = "dev-SNAPSHOT"
+junit-jupiter = "5.10.3"
 
 
 [libraries]
-google-whistle-core-runtime = { module = "com.essaid.groupId.com.google.cloud.verticals.foundations.dataharmonization:runtime", version.ref = "whistle" }
-se-whistle-common = { module = "com.essaid.whistle:common", version = "0.0.1-SNAPSHOT" }
+google-whistle-runtime = { module = "com.essaid.groupId.com.google.cloud.verticals.foundations.dataharmonization:runtime", version.ref = "google-whistle" }
+essaid-whistle-common = { module = "com.essaid.whistle:common", version = "0.0.1-SNAPSHOT" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-jupiter" }

@@ -1,7 +1,7 @@
 [versions]
-whistle = "dev-SNAPSHOT"
+google-whistle = "dev-SNAPSHOT"
 junit-jupiter = "5.10.3"
 
 [libraries]
-whistle-runtime = { module = "com.essaid.groupId.com.google.cloud.verticals.foundations.dataharmonization:runtime", version.ref = "whistle" }
+google-whistle-runtime = { module = "com.essaid.groupId.com.google.cloud.verticals.foundations.dataharmonization:runtime", version.ref = "google-whistle" }
 junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-jupiter" }

@@ -30,7 +30,7 @@ repositories {
 }
 
 dependencies {
-    implementation(libs.whistle.runtime)
+    implementation(libs.google.whistle.runtime)
     testImplementation(libs.junit.jupiter)
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }

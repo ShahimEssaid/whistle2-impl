@@ -9,5 +9,19 @@
         <module name="common" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="all-dist-build" target="17" />
+      <module name="all-dist-build.main" target="17" />
+      <module name="all-dist-build.test" target="17" />
+      <module name="common-build.common" target="17" />
+      <module name="common-build.common.main" target="17" />
+      <module name="common-build.common.test" target="17" />
+      <module name="se-plugins-build.seutil" target="17" />
+      <module name="se-plugins-build.seutil.main" target="17" />
+      <module name="se-plugins-build.seutil.test" target="17" />
+      <module name="seutil-plugin-build.seutil-plugin" target="17" />
+      <module name="seutil-plugin-build.seutil-plugin.main" target="17" />
+      <module name="seutil-plugin-build.seutil-plugin.test" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>

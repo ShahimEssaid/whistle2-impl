@@ -16,6 +16,7 @@
               <build path="$PROJECT_DIR$/utils-build" name="utils-build">
                 <projects>
                   <project path="$PROJECT_DIR$/utils-build" />
+                  <project path="$PROJECT_DIR$/utils-build/cli" />
                   <project path="$PROJECT_DIR$/utils-build/common" />
                 </projects>
               </build>
@@ -29,6 +30,7 @@
             <option value="$PROJECT_DIR$/plugins-build" />
             <option value="$PROJECT_DIR$/plugins-build/seutil" />
             <option value="$PROJECT_DIR$/utils-build" />
+            <option value="$PROJECT_DIR$/utils-build/cli" />
             <option value="$PROJECT_DIR$/utils-build/common" />
           </set>
         </option>
@@ -40,6 +42,7 @@
               <build path="$PROJECT_DIR$/utils-build" name="utils-build">
                 <projects>
                   <project path="$PROJECT_DIR$/utils-build" />
+                  <project path="$PROJECT_DIR$/utils-build/cli" />
                   <project path="$PROJECT_DIR$/utils-build/common" />
                 </projects>
               </build>
@@ -52,6 +55,7 @@
             <option value="$PROJECT_DIR$/plugins-build" />
             <option value="$PROJECT_DIR$/plugins-build/seutil" />
             <option value="$PROJECT_DIR$/utils-build" />
+            <option value="$PROJECT_DIR$/utils-build/cli" />
             <option value="$PROJECT_DIR$/utils-build/common" />
           </set>
         </option>
@@ -61,6 +65,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/utils-build" />
+            <option value="$PROJECT_DIR$/utils-build/cli" />
             <option value="$PROJECT_DIR$/utils-build/common" />
           </set>
         </option>

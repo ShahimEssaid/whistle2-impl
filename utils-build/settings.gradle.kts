@@ -3,5 +3,5 @@ plugins {
 }
 
 rootProject.name = "utils-build"
-include("common")
+include("common", "cli")
 

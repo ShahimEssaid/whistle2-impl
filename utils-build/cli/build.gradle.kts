@@ -31,6 +31,7 @@ repositories {
 
 dependencies {
     implementation(libs.google.whistle.runtime)
+    implementation(project(":common"))
     implementation(libs.picocli.picocli)
     testImplementation(libs.junit.jupiter)
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")

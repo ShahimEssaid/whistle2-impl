@@ -7,3 +7,4 @@ plugins {
 rootProject.name = "all-build"
 
 includeBuild("../../plugins-build")
+includeBuild("../../utils-build")

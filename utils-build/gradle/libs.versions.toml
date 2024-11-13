@@ -2,8 +2,10 @@
 google-whistle = "dev-SNAPSHOT"
 junit-jupiter = "5.10.3"
 picocli-picocli = "4.7.6"
+spark = "3.5.3"
 
 [libraries]
 google-whistle-runtime = { module = "com.essaid.groupId.com.google.cloud.verticals.foundations.dataharmonization:runtime", version.ref = "google-whistle" }
 junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-jupiter" }
 picocli-picocli = { module = "info.picocli:picocli", version.ref = "picocli-picocli" }
+spark-sql = { group = "org.apache.spark", name = "spark-sql_2.12", version.ref = "spark"}

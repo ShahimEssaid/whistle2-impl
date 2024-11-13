@@ -18,6 +18,7 @@
                   <project path="$PROJECT_DIR$/utils-build" />
                   <project path="$PROJECT_DIR$/utils-build/cli" />
                   <project path="$PROJECT_DIR$/utils-build/common" />
+                  <project path="$PROJECT_DIR$/utils-build/spark" />
                 </projects>
               </build>
             </builds>
@@ -32,6 +33,7 @@
             <option value="$PROJECT_DIR$/utils-build" />
             <option value="$PROJECT_DIR$/utils-build/cli" />
             <option value="$PROJECT_DIR$/utils-build/common" />
+            <option value="$PROJECT_DIR$/utils-build/spark" />
           </set>
         </option>
       </GradleProjectSettings>
@@ -44,6 +46,7 @@
                   <project path="$PROJECT_DIR$/utils-build" />
                   <project path="$PROJECT_DIR$/utils-build/cli" />
                   <project path="$PROJECT_DIR$/utils-build/common" />
+                  <project path="$PROJECT_DIR$/utils-build/spark" />
                 </projects>
               </build>
             </builds>
@@ -57,6 +60,7 @@
             <option value="$PROJECT_DIR$/utils-build" />
             <option value="$PROJECT_DIR$/utils-build/cli" />
             <option value="$PROJECT_DIR$/utils-build/common" />
+            <option value="$PROJECT_DIR$/utils-build/spark" />
           </set>
         </option>
       </GradleProjectSettings>
@@ -67,6 +71,7 @@
             <option value="$PROJECT_DIR$/utils-build" />
             <option value="$PROJECT_DIR$/utils-build/cli" />
             <option value="$PROJECT_DIR$/utils-build/common" />
+            <option value="$PROJECT_DIR$/utils-build/spark" />
           </set>
         </option>
       </GradleProjectSettings>

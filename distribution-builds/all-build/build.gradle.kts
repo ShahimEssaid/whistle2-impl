@@ -17,6 +17,7 @@ dependencies {
 
     implementation("com.essaid.whistle.plugin:seutil")
     implementation("com.essaid.whistle.utils:cli")
+    implementation("com.essaid.whistle.utils:spark")
 
     testImplementation(libs.junit.jupiter)
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")

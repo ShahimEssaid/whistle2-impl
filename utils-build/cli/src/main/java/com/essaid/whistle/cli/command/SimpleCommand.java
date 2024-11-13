@@ -268,6 +268,7 @@ public class SimpleCommand implements Callable<Void> {
     }
 
     void transform(Path inputPath, Path outputPath) throws IOException {
+        System.out.println("Transforming: " + inputPath);
         long l = System.currentTimeMillis();
         Transform transform = new Transform(inputPath, outputPath, initializedBuilder);
 

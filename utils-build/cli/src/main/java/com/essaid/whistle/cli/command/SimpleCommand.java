@@ -1,6 +1,6 @@
 package com.essaid.whistle.cli.command;
 
-import com.essaid.whistle.common.concurrent.Transform;
+import com.essaid.whistle.common.concurrent.WhistlePathTransform;
 import com.google.cloud.verticals.foundations.dataharmonization.imports.ImportPath;
 import com.google.cloud.verticals.foundations.dataharmonization.imports.impl.FileLoader;
 import com.google.cloud.verticals.foundations.dataharmonization.init.Engine.Builder;
@@ -23,7 +23,6 @@ import java.util.concurrent.ExecutorCompletionService;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
-import java.util.regex.Matcher;
 import java.util.stream.Stream;
 
 import picocli.CommandLine.ArgGroup;
@@ -75,7 +74,7 @@ public class SimpleCommand implements Callable<Void> {
     private Date now;
     private ThreadPoolExecutor executor;
     private LinkedBlockingQueue<Runnable> executorQueue;
-    private ExecutorCompletionService<Transform> completion;
+    private ExecutorCompletionService<WhistlePathTransform> completion;
 
 
     @Override
@@ -216,7 +215,7 @@ public class SimpleCommand implements Callable<Void> {
 
         if (errors) {
             System.out.print("Errors found, exiting 1");
-            System.exit(1);
+           throw new IllegalStateException("Errors found");
         }
 
     }
@@ -270,7 +269,7 @@ public class SimpleCommand implements Callable<Void> {
     void transform(Path inputPath, Path outputPath) throws IOException {
         System.out.println("Transforming: " + inputPath);
         long l = System.currentTimeMillis();
-        Transform transform = new Transform(inputPath, outputPath, initializedBuilder);
+        WhistlePathTransform transform = new WhistlePathTransform(inputPath, outputPath, initializedBuilder, true);
 
         while (executor.getQueue().size() > 5) {
             try {

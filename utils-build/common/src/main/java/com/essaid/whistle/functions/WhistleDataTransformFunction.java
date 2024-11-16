@@ -3,9 +3,10 @@ package com.essaid.whistle.functions;
 import com.google.cloud.verticals.foundations.dataharmonization.data.Data;
 import com.google.cloud.verticals.foundations.dataharmonization.init.Engine;
 import com.google.cloud.verticals.foundations.dataharmonization.init.Engine.InitializedBuilder;
+import java.io.Serializable;
 import java.util.function.Function;
 
-public class WhistleDataTransformFunction implements Function<Data, Data> {
+public class WhistleDataTransformFunction implements Function<Data, Data>, Serializable {
 
   private final InitializedBuilder builder;
 

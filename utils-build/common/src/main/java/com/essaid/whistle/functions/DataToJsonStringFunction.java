@@ -2,9 +2,10 @@ package com.essaid.whistle.functions;
 
 import com.essaid.whistle.common.util.DataUtils;
 import com.google.cloud.verticals.foundations.dataharmonization.data.Data;
+import java.io.Serializable;
 import java.util.function.Function;
 
-public class DataToJsonStringFunction implements Function<Data, String> {
+public class DataToJsonStringFunction implements Function<Data, String>, Serializable {
 
   private final boolean pretty;
 

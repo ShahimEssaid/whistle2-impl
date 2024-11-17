@@ -3,14 +3,11 @@ package com.essaid.whistle.common.util;
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 import com.google.cloud.verticals.foundations.dataharmonization.data.Data;
-import com.google.cloud.verticals.foundations.dataharmonization.data.NullData;
 import com.google.cloud.verticals.foundations.dataharmonization.data.serialization.impl.JsonSerializerDeserializer;
 import com.google.common.io.ByteStreams;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -18,16 +15,24 @@ import java.nio.file.Path;
 
 public class DataUtils {
 
-  public static Data readJson(Path path) {
+  public static byte[] readJsonFile(Path path) {
     File file = path.toFile();
     try (FileInputStream fis = new FileInputStream(file)) {
-      byte[] json = ByteStreams.toByteArray(fis);
-      return new JsonSerializerDeserializer().deserialize(json);
+      return ByteStreams.toByteArray(fis);
+    } catch (FileNotFoundException e) {
+      throw new RuntimeException(e);
     } catch (IOException e) {
-      System.err.printf("Unable to read file %s%n", path);
-      e.printStackTrace(System.err);
-      return NullData.instance;
+      throw new RuntimeException(e);
     }
+  }
+
+  public static Data jsonBytesToData(byte[] jsonBytes) {
+    return JsonSerializerDeserializer.jsonToData(jsonBytes);
+  }
+
+  public static Data readJson(Path path) {
+    byte[] bytes = readJsonFile(path);
+    return new JsonSerializerDeserializer().deserialize(bytes);
   }
 
   public static void writeJson(Data data, Path path, boolean prettyJson) throws IOException {
@@ -39,7 +44,7 @@ public class DataUtils {
   }
 
   public static String toJsonString(Data data, boolean prettyPrint) {
-    if(prettyPrint) {
+    if (prettyPrint) {
       return JsonSerializerDeserializer.dataToPrettyJson(data);
     }
     return JsonSerializerDeserializer.dataToJsonString(data);

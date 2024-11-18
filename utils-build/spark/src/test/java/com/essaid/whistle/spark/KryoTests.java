@@ -93,7 +93,6 @@ public class KryoTests {
 //    System.out.println(o);
   }
 
-
   @Test
   void helloContainer() {
     Container container = new DefaultContainer();
@@ -110,7 +109,7 @@ public class KryoTests {
   }
 
   ByteBufferInput getInput() {
-    return new ByteBufferInput(output.getByteBuffer().rewind());
+    return new ByteBufferInput(output.getByteBuffer().flip());
   }
 
 

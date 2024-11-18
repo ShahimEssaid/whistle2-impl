@@ -4,6 +4,7 @@ import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.Registration;
 import com.google.cloud.verticals.foundations.dataharmonization.data.NullData;
 import com.google.cloud.verticals.foundations.dataharmonization.data.impl.DefaultPrimitive;
+import com.twitter.chill.SingletonSerializer;
 import org.objenesis.instantiator.ObjectInstantiator;
 
 public class KryoDataUtils {
@@ -30,13 +31,14 @@ public class KryoDataUtils {
 
 
     registration = kryo.register(NullData.class);
-    registration.setInstantiator(new ObjectInstantiator() {
-
-      @Override
-      public Object newInstance() {
-        return NullData.instance;
-      }
-    });
+    registration.setSerializer(new SingletonSerializer(NullData.instance));
+//    registration.setInstantiator(new ObjectInstantiator() {
+//
+//      @Override
+//      public Object newInstance() {
+//        return NullData.instance;
+//      }
+//    });
 
 
   }

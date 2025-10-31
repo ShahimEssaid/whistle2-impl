@@ -3,5 +3,7 @@ plugins {
 }
 
 rootProject.name = "utils-build"
-include("common", "cli", "spark")
+include("common")
+include( "cli")
+include("spark")
 

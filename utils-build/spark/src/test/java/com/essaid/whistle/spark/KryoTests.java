@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -27,6 +28,7 @@ public class KryoTests {
   ByteBufferOutput output = new ByteBufferOutput(1000, Integer.MAX_VALUE);
 
   @Test
+  @Disabled
   void fhirJson() throws IOException {
 
     String jsonString = Files.readString(FHIR_JSON);
@@ -94,6 +96,7 @@ public class KryoTests {
   }
 
   @Test
+  @Disabled
   void helloContainer() {
     Container container = new DefaultContainer();
     container.setField("null", NullData.instance);

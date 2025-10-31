@@ -1,34 +1,34 @@
 plugins {
     `java-library`
-    `maven-publish`
+    id("com.vanniktech.maven.publish") version "0.34.0"
     idea
 }
 
-publishing {
-    publications {
-        create<MavenPublication>("mavenJava") {
-            from(components["java"])
+//publishing {
+//    publications {
+//        create<MavenPublication>("mavenJava") {
+//            from(components["java"])
+//
+//            pom {
+//                name.set("Lib")
+//                description.set("Lib description.")
+//                developers {
+//                    developer {
+//                        name.set("Shahim Essaid")
+//                        email.set("shahim@essaid.com")
+//                    }
+//                }
+//            }
+//        }
+//    }
+//}
 
-            pom {
-                name.set("Lib")
-                description.set("Lib description.")
-                developers {
-                    developer {
-                        name.set("Shahim Essaid")
-                        email.set("shahim@essaid.com")
-                    }
-                }
-            }
-        }
-    }
-}
-
-repositories {
-    mavenCentral()
-    maven {
-        url = uri("https://oss.sonatype.org/content/repositories/snapshots/")
-    }
-}
+//repositories {
+//    mavenCentral()
+//    maven {
+//        url = uri("https://oss.sonatype.org/content/repositories/snapshots/")
+//    }
+//}
 
 dependencies {
     implementation(libs.google.whistle.runtime)
@@ -48,7 +48,8 @@ java {
 
 tasks.named<Test>("test") {
     useJUnitPlatform()
-    jvmArgs = listOf("-XX:+IgnoreUnrecognizedVMOptions",
+    jvmArgs = listOf(
+        "-XX:+IgnoreUnrecognizedVMOptions",
         "--add-opens=java.base/java.lang=ALL-UNNAMED",
         "--add-opens=java.base/java.lang.invoke=ALL-UNNAMED",
         "--add-opens=java.base/java.lang.reflect=ALL-UNNAMED",
@@ -62,9 +63,49 @@ tasks.named<Test>("test") {
         "--add-opens=java.base/sun.nio.cs=ALL-UNNAMED",
         "--add-opens=java.base/sun.security.action=ALL-UNNAMED",
         "--add-opens=java.base/sun.util.calendar=ALL-UNNAMED",
-        "--add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED")
+        "--add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED"
+    )
 }
 
-idea(){
-
+publishing {
+    repositories {
+        maven {
+            name = "GitHubSEPackages"
+            url = uri("https://maven.pkg.github.com/ShahimEssaid/m2")
+            credentials(PasswordCredentials::class)
+        }
+    }
 }
+
+mavenPublishing {
+    publishToMavenCentral()
+    pom {
+        developers {
+            developer {
+                id = "ShahimEssaid"
+                name = "Shahim Essaid"
+                email = "shahim@essaid.com"
+            }
+        }
+
+        scm {
+            url =
+                "https://github.com/ShahimEssaid/examples-2024/tree/main/gradle-builds/java-17-lib-build-kts"
+        }
+    }
+}
+
+
+repositories {
+    mavenCentral()
+    maven {
+        name = "CentralSnapshots"
+        url = uri("https://central.sonatype.com/repository/maven-snapshots/")
+    }
+    maven {
+        name = "GitHubSEPackages"
+        url = uri("https://maven.pkg.github.com/ShahimEssaid/m2")
+    }
+}
+
+tasks.withType<Jar> { duplicatesStrategy = DuplicatesStrategy.EXCLUDE }

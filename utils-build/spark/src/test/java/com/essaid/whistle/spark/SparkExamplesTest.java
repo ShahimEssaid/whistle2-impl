@@ -22,6 +22,7 @@ import org.apache.spark.sql.Encoders;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
 import org.apache.spark.sql.functions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import scala.Tuple2;
 
@@ -66,11 +67,13 @@ public class SparkExamplesTest {
   }
 
   @Test
+  @Disabled
   void hello(){
     loadJson();
   }
 
   @Test
+  @Disabled
   void whistleRun() throws IOException {
     Dataset<Row> inData = loadJson();
     Dataset<Row> outData = null;

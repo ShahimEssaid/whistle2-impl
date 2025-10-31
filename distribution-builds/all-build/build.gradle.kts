@@ -5,7 +5,12 @@ plugins {
 repositories {
     mavenCentral()
     maven {
-        url = uri("https://oss.sonatype.org/content/repositories/snapshots/")
+        name = "CentralSnapshots"
+        url = uri("https://central.sonatype.com/repository/maven-snapshots/")
+    }
+    maven {
+        name = "GitHubSEPackages"
+        url = uri("https://maven.pkg.github.com/ShahimEssaid/m2")
     }
 }
 
